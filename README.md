@@ -83,3 +83,46 @@ docker run -itd -p 80:80 --rm my-app:prod
 
 We can use docker compose to document and configure all of the application's service dependencies,starting with the dev environment. 
 
+*docker-compose.yml:*
+```docker
+version: '3.7'
+services:
+    app:
+        container_name: my-app
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - '.:/app'
+            - '/app/node_modules'
+        ports:
+            - '3001:3000'
+        environment:
+            - NODE_ENV=development
+```
+
+- Activate the container using docker-compose:
+```bash
+docker-compose up -d --build
+```
+
+Now that the development images and docker-compose are up and running, it's time to create the same frameworks, ready for production.
+*docker-compose.yml:*
+```docker
+version: '3.7'
+services:
+  app-prod:
+      container_name: my-app
+      build:
+        context: .
+        dockerfile: Dockerfile-prod
+      ports:
+        - '8080:80'
+```
+
+- Activate the container using docker-compose:
+```bash
+docker-compose -f docker-compose-prod.yml up -d --build
+```
+
+And, that's it, the react app is done!
