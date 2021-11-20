@@ -5,7 +5,7 @@ A project made with [React](https://reactjs.org/) and [Docker](https://www.docke
 
 ## Prerequisites
 
-Here are the prerequisites required for this tutorial. 
+Here are the prerequisites required for this project: 
 - [React](https://reactjs.org/)
 - [Docker](https://www.docker.com/)
 
