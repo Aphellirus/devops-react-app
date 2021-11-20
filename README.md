@@ -78,3 +78,7 @@ docker build -f Dockerfile-prod -t my-app:prod .
 docker run -itd -p 80:80 --rm my-app:prod
 ```
 > And the app is now running on port 80.
+
+
+We can finish the project with docker compose to document and configure all of the application's service dependencies. 
+
