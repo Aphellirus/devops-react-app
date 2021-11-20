@@ -37,7 +37,7 @@ CMD ["yarn", "start"]
 
 ```
 > `yarn cache clean` running this command will clear the global cache.
-> `yarn --update-checksums` lock lockfile if there's a mismatch between them and their package's checksum. Both are optional, cache won't break the docker process, but both can cause some issues during the build process tho, so delete both lines if you run into any.
+> `yarn --update-checksums` lock lockfile if there's a mismatch between them and their package's checksum. Both are optional, cleaning cache won't break the docker process, but both can cause some issues during the build process tho, so delete both lines if you run into any.
 
 Now we can build and tag our docker image
 ```bash
