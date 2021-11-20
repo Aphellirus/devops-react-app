@@ -107,7 +107,7 @@ docker-compose up -d --build
 ```
 
 Now that the development images and docker-compose are up and running, it's time to create the same frameworks, ready for production.
-*docker-compose.yml:*
+*docker-compose-prod.yml:*
 ```docker
 version: '3.7'
 services:
