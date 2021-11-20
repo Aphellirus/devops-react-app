@@ -79,6 +79,7 @@ docker run -itd -p 80:80 --rm my-app:prod
 ```
 > And the app is now running on port 80.
 
+## Finishing with Docker Compose
 
-We can finish the project with docker compose to document and configure all of the application's service dependencies. 
+We can use docker compose to document and configure all of the application's service dependencies,starting with the dev environment. 
 
